@@ -1,0 +1,19 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudMainContent>
+        <MudContainer>
+            <div class="d-flex justify-center pb-8 pt-8">
+                <MyNavMenu />
+            </div>
+            <div class="d-flex justify-center pb-8 pt-8">
+                <div>@Body</div>
+            </div>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
