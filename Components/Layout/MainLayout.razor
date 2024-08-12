@@ -2,7 +2,8 @@
 @using DemoMud.Components
 @using MudBlazor
 
-<MudThemeProvider />
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+<MudSwitch @bind-Value="_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Toggle Light/Dark Mode" />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -15,7 +16,15 @@
             </div>
             <div class="d-flex justify-center pb-8 pt-8">
                 <div>@Body</div>
+
+                <MudText Class="ma-4">This is an example text!</MudText>
+
             </div>
         </MudContainer>
     </MudMainContent>
 </MudLayout>
+
+@code {
+    private MudTheme _theme = new();
+    private bool _isDarkMode;
+}
